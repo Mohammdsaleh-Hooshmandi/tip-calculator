@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tip-selector {
+    @apply font-bold w-40 h-12 flex items-center justify-center
+    text-2xl text-very-light-grayish-cyan bg-very-dark-cyan rounded-lg
+    cursor-pointer hover:bg-strong-cyan duration-500 hover:text-very-dark-cyan xl:text-3xl;
+}
+
+.selected-tip {
+    @apply ring-1;
+}
+
+.selected-tip-custome {
+    @apply font-bold w-40 h-12 pl-5
+    text-2xl text-very-light-grayish-cyan bg-very-dark-cyan rounded-lg
+    focus:bg-very-light-grayish-cyan focus:text-very-dark-cyan placeholder:text-very-light-grayish-cyan
+    outline-strong-cyan xl:text-3xl;
+}
+
+.label {
+    @apply font-bold text-slate-400 xl:text-2xl;
+}
+
+.inValid {
+    @apply border-2 border-red-500;
+}
+
+.active {
+    @apply text-very-dark-cyan bg-strong-cyan;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- All meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQury CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <!-- Title -->
+    <title>Tip calculator</title>
+</head>
+
+<body class="w-full bg-very-light-grayish-cyan">
+    <h1 class="text-center mt-7 mb-12 text-very-dark-cyan font-bold text-2xl xl:text-5xl">Tip calculator</h1>
+
+    <div
+        class="bg-white mx-auto p-7 pt-12 rounded-t-4xl flex flex-col space-y-4 sm:w-[560px] sm:rounded-4xl xl:flex-row xl:w-[1130px] xl:h-[600px] xl:space-x-20 xl:rounded-4xl">
+        <div class="w-full space-y-6 xl:space-y-20 xl:py-4">
+            <div>
+                <div class="flex justify-between">
+                    <label for="bill-input" class="label">Bill</label>
+                    <label for="bill-input" class="text-red-400 font-bold" hidden>Can't be Zero or Less</label>
+                </div>
+                <label for="bill-input" class="w-full flex justify-between bg-very-light-grayish-cyan pl-3">
+                    <img src="images/icon-dollar.svg" class="py-2">
+                    <input id="bill-input" type="number"
+                        class="w-20 font-bold text-2xl text-very-dark-cyan bg-very-light-grayish-cyan focus:outline-none xl:text-4xl">
+                </label>
+            </div>
+
+            <div>
+                <p class="label">Select Tip %</p>
+
+                <form class="flex justify-between xl:flex-col xl:space-y-6">
+                    <input type="radio" name="select-tip" id="5" value="5" hidden>
+                    <input type="radio" name="select-tip" id="10" value="10" hidden>
+                    <input type="radio" name="select-tip" id="15" value="15" hidden>
+                    <input type="radio" name="select-tip" id="25" value="25" hidden>
+                    <input type="radio" name="select-tip" id="50" value="50" hidden>
+
+                    <div class="flex flex-col space-y-6 justify-between xl:flex-row xl:space-y-0 xl:space-x-6">
+                        <label for="5" class="tip-selector">5%</label>
+                        <label for="10" class="tip-selector">10%</label>
+                        <label for="15" class="tip-selector">15%</label>
+                    </div>
+
+                    <div class="flex flex-col space-y-6 justify-between xl:flex-row xl:space-y-0 xl:space-x-6">
+                        <label for="25" class="tip-selector">25%</label>
+                        <label for="50" class="tip-selector">50%</label>
+                        <input type="number" id="tip-input" name="select-tip" class="selected-tip-custome" placeholder="Custome">
+                    </div>
+                </form>
+            </div>
+
+            <div>
+                <div class="flex justify-between">
+                    <label for="number-input" class="label">Number of People</label>
+                    <label for="bill-input" class="text-red-400 font-bold" hidden>Can't be Zero or Less</label>
+                </div>
+                <label for="number-input" class="w-full flex justify-between bg-very-light-grayish-cyan pl-3">
+                    <img src="images/icon-person.svg" class="py-2">
+                    <input id="number-input" type="number"
+                        class="w-20 font-bold text-2xl text-very-dark-cyan bg-very-light-grayish-cyan focus:outline-none xl:text-4xl">
+                </label>
+            </div>
+        </div>
+        <div class="w-full flex flex-col justify-between bg-very-dark-cyan p-5 rounded-3xl">
+            <div>
+                <div class="flex justify-between">
+                    <div>
+                        <h3 class="text-white font-bold text-2xl">Tip Amount</h3>
+                        <p class="font-bold text-grayish-cyan">/ Person</p>
+                    </div>
+
+                    <h2 class="font-bold text-strong-cyan text-3xl xl:text-5xl">$<span>0.00</span></h2>
+                </div>
+
+                <div class="flex justify-between">
+                    <div>
+                        <h3 class="text-white font-bold text-2xl">Total</h3>
+                        <p class="font-bold text-grayish-cyan">/ Person</p>
+                    </div>
+
+                    <h2 class="font-bold text-strong-cyan text-3xl xl:text-5xl">$<span>0.00</span></h2>
+                </div>
+            </div>
+            <button type="button"
+                class="w-full mt-8 p-2 bg-strong-cyan rounded-lg text-very-dark-cyan font-semibold text-2xl">
+                REST
+            </button>
+        </div>
+    </div>
+
+    <!-- JS file -->
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
